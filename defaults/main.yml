@@ -1,0 +1,12 @@
+---
+
+fwknop_pcap_intf: eth0
+default_access_stanza:
+  source: ANY
+  open_ports: tcp/22
+  key_base64: "{{ fwknop_main_key_base64 }}"
+  hmac_key_base64: "{{ fwknop_main_hmac_key_base64 }}"
+  fw_access_timeout: 30
+
+fwknop_access_stanzas:
+  - "{{ default_access_stanza }}"

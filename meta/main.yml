@@ -1,0 +1,19 @@
+galaxy_info:
+  author: Hugo Rivera
+  description: Secure your server using fwknop, an improved port knocking utility.
+
+  license: MIT
+
+  min_ansible_version: 1.2
+
+  # platforms:
+
+  galaxy_tags:
+    - system
+    - security
+    - networking
+    - hardening
+    - port
+    - knocking
+
+dependencies: []

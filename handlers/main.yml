@@ -1,0 +1,6 @@
+---
+
+- name: Restart fwknop
+  service:
+    name: fwknop-server
+    state: restarted
