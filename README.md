@@ -9,7 +9,7 @@ Requirements
 ------------
 
 Make sure your firewall blocks access to any ports
-you wish to hide.
+you wish to hide. See `iptables-example` for sample iptables commands.
 
 You need an fwknop client to reveal hidden ports and to setup the
 fwknop key.
