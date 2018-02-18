@@ -1,0 +1,8 @@
+[default]
+[10.0.0.2]
+KEY_BASE64                  dGVzdF9wYXNzCg==
+HMAC_KEY_BASE64             dGVzdF9obWFjX3Bhc3MK
+ALLOW_IP                    10.0.0.1
+ACCESS                      tcp/22
+SPA_SERVER                  10.0.0.2
+USE_HMAC                    Y
