@@ -1,6 +1,6 @@
 galaxy_info:
   author: Hugo Rivera
-  description: Secure your server using fwknop, an improved port knocking utility.
+  description: Secure ports on your server from unauthorized access using fwknop, an improved port knocking utility.
 
   license: MIT
 
