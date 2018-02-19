@@ -7,18 +7,16 @@
   template:
     src: fwknopd.conf.j2
     dest: /etc/fwknop/fwknopd.conf
+  notify: Restart fwknop server
 
 - name: Copy /etc/default
   copy:
     src: etc_default_fwknop-server
     dest: /etc/default/fwknop-server
+  notify: Restart fwknop server
 
 - name: Copy access.conf
   template:
     src: access.conf.j2
     dest: /etc/fwknop/access.conf
-
-- name: Restart fwknop server
-  service:
-    name: fwknop-server
-    state: restarted
+  notify: Restart fwknop server
