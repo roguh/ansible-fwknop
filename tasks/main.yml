@@ -1,7 +1,7 @@
 ---
 
 - name: Install fwknop server
-  apt: name=fwknop-server
+  package: name=fwknop-server state=latest
 
 - name: Copy fwknopd.conf
   template:
