@@ -33,9 +33,16 @@ Role Variables
 |------------------------|------------------------------------------------|
 | `source` | Comma separated list of IP addresses or networks from which SPA packets are accepted, or `ANY`. Default `ANY`.
 | `open_ports` | Comma separated list of protocol/port pairs to open. Default `tcp/22`.
+| `key` | Symmetric key.
+| `hmac_key` | Symmetric HMAC key.
 | `key_base64` | Symmetric key encoded in base64.
 | `hmac_key_base64` | Symmetric HMAC key encoded in base64.
-| `fw_access_timeout` | Length of time access to `open_ports` in seconds. Default: `30`.
+| `fw_access_timeout` | Length of time access to `open_ports` in seconds. Default: `10`.
+| `encryption_mode` | Set this to `legacy` if the fwknop server version is less than 2.5.
+| `restrict_ports` | Ports that should NOT be allowed regardless of the validity of the incoming SPA packet.
+| `destination` | Default: `ANY`.
+
+Make sure to define at least `source` and `key` or `key_base64`.
 
 Example Playbook
 ----------------

@@ -164,14 +164,26 @@
 
 SOURCE                     {{ stanza['source'] }}
 OPEN_PORTS                 {{ stanza['open_ports'] }}
-{% if stanza.get('required_username') %}REQUIRE_USERNAME           {{ stanza['required_username'] }}{% endif %}
 REQUIRE_SOURCE_ADDRESS     {{ stanza['required_source_address'] | default('Y') }}
 FW_ACCESS_TIMEOUT          {{ stanza['fw_access_timeout'] | default('10') }}
-{% if stanza.get('key_base64') %}KEY_BASE64            {{ stanza['key_base64'] }}{% endif %}
-{% if stanza.get('hmac_key_base64') %}HMAC_KEY_BASE64            {{ stanza['hmac_key_base64'] }}{% endif %}
-{% if stanza.get('key') %}KEY {{ stanza['key'] }}{% endif %}
-{% if stanza.get('hmac_key') %}HMAC_KEY {{ stanza['hmac_key'] }}{% endif %}
-
+{% if stanza.get('destination')      %}DESTINATION                {{ stanza['destination'] }}
+{% endif %}
+{% if stanza.get('encryption_mode')  %}ENCRYPTION_MODE            {{ stanza['encryption_mode'] }}
+{% endif %}
+{% if stanza.get('hmac_digest_type') %}HMAC_DIGEST_TYPE           {{ stanza['hmac_digest_type'] }}
+{% endif %}
+{% if stanza.get('restrict_ports')   %}RESTRICT_PORTS             {{ stanza['restrict_ports'] }}
+{% endif %}
+{% if stanza.get('require_username') %}REQUIRE_USERNAME           {{ stanza['require_username'] }}
+{% endif %}
+{% if stanza.get('key_base64')       %}KEY_BASE64                 {{ stanza['key_base64'] }}
+{% endif %}
+{% if stanza.get('hmac_key_base64')  %}HMAC_KEY_BASE64            {{ stanza['hmac_key_base64'] }}
+{% endif %}
+{% if stanza.get('key')              %}KEY                        {{ stanza['key'] }}
+{% endif %}
+{% if stanza.get('hmac_key')         %}HMAC_KEY                   {{ stanza['hmac_key'] }}
+{% endif %}
 {% endfor %}
 {% endif %}
 
